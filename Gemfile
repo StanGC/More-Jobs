@@ -39,6 +39,9 @@ gem 'devise'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'carrierwave'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
