@@ -7,24 +7,15 @@
 <table class="table table-boldered">
   <thead>
     <tr>
-      <td>
-        職缺
-      </td>
-      <td>
-        收到履歷數量
-      </td>
-      <td>
-        薪資下限
-      </td>
-      <td>
-        薪資上限
-      </td>
-      <td>
-        管理選項
-      </td>
-      <td>
-        刊登時間
-      </td>
+      <td>職缺</td>
+      <td>收到履歷數量</td>
+      <td>薪資下限</td>
+      <td>薪資上限</td>
+      <td>管理選項</td>
+      <td>刊登時間</td>
+      <td>Category</td>
+      <td>Company</td>
+      <td>City</td>
     </tr>
   </thead>
 
@@ -51,9 +42,10 @@
       <%= link_to("Hide", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-default") %>
       <% end %>
     </td>
-    <td>
-      <%= job.created_at %>
-    </td>
+    <td><%= time_ago_in_words(job.created_at) %> ago</td>
+    <td><%= job.category %></td>
+    <td><%= job.company %></td>
+    <td><%= job.city %></td>
   </tr>
   <% end %>
 </table>
