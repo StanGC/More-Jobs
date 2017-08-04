@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -323,13 +324,15 @@ hr {
 .thumbnail h4 {
   text-align: center;
   margin:0;
+  margin-left: -5px;
+  margin-right: -5px;
   padding:8px 0;
-  border:solid 1px #eee;
-  background: #F5F5F5;
+  border-top: solid 1px #eee;
+  transition: 1.5s;
 }
 
 .thumbnail h4 a:hover {
-  color: darken($red, 5%);
+  color: $red;
   text-decoration: none;
 }
 

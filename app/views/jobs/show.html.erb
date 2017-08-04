@@ -4,6 +4,9 @@
     <hr>
     <div class="job-content">
       <p>
+        <div class="pull-right">
+          <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(:back)) %>
+        </div><br>
         <span>Job Description:</span> <br>
           <%= simple_format(@job.description, class: "job-description") %>
       </p>
