@@ -3,13 +3,18 @@
     <div class="pull-right">
       <%= link_to("Check All Jobs", jobs_path) %> | <%= link_to("Back", root_path) %>
     </div>
-
-    <% if @jobs.count > 0 %>
-    <h3>Total find <%= @jobs.count %> jobs</h3>
-    <div class="divider"></div>
-    <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+    <% if @jobs.blank?%>
+      <br>
+      <div>
+        Opps! No any results matched, please try again.
+      </div>
     <% else %>
-    Oops, No any results matched,please try again! <%= link_to("Get all Jobs", jobs_path, class: "btn btn-primary") %>
+      <h3>Total find <%= @jobs.count %> jobs</h3>
+      <div class="divider"></div>
+      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
     <% end %>
+    <div class="text-center">
+      <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+    </div>
   </div>
 </div>

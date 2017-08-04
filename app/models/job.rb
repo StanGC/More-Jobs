@@ -18,8 +18,4 @@ class Job < ApplicationRecord
     self.is_hidden = true
     self.save
   end
-
-  searchable do
-    text :title, :city, :category, :company
-  end
 end
