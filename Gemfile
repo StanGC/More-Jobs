@@ -37,8 +37,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'carrierwave'
-gem 'sunspot_rails'
-gem 'progress_bar'
+gem 'ransack'
+gem 'seo_helper'
 gem 'will_paginate-bootstrap'
 
 group :development, :test do
