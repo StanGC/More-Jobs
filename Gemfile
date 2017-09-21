@@ -40,6 +40,7 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'seo_helper'
 gem 'will_paginate-bootstrap'
+gem 'impressionist'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
