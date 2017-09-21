@@ -12,6 +12,8 @@ class Job < ApplicationRecord
   scope :lower_salary, -> { order('wage_lower_bound DESC') }
   scope :upper_salary, -> { order('wage_upper_bound DESC') }
 
+  is_impressionable
+
   def publish!
     self.is_hidden = false
     self.save

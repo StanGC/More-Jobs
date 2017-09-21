@@ -1,9 +1,11 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   before_action :validate_search_key, only: [:search]
+  impressionist :actions=>[:show]
 
   def show
     @job = Job.find(params[:id])
+    impressionist(@job)
 
     if @job.is_hidden
       flash[:warning] = "This Job already archieved"
